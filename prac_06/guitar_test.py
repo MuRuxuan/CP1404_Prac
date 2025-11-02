@@ -1,14 +1,23 @@
+# guitar_test.py
 """
 CP1404/CP5632 Practical 06
 Guitar Test Program
-Tests the Guitar class methods (get_age and is_vintage).
+This program tests the functionality of the Guitar class, specifically verifying
+the correctness of the get_age and is_vintage methods through a series of test cases.
 """
 
 from guitar import Guitar
 
+def main():
+    """Coordinate the execution of guitar method tests."""
+    test_guitar_methods()
 
 def test_guitar_methods():
-    """Test the get_age and is_vintage methods of the Guitar class."""
+    """
+    Test the get_age and is_vintage methods of the Guitar class.
+    Creates multiple Guitar instances with different attributes and compares
+    the actual method results with expected values, printing each test outcome.
+    """
     gibson = Guitar("Gibson L-5 CES", 1922, 16035.40)
     another_guitar = Guitar("Another Guitar", 2013, 999.99)
 
@@ -24,5 +33,4 @@ def test_guitar_methods():
     non_vintage_test_guitar = Guitar("Non-Vintage Test Guitar", 1973, 1499.99)
     print(f"{non_vintage_test_guitar.name} is_vintage() - Expected False. Got {non_vintage_test_guitar.is_vintage()}")
 
-
-test_guitar_methods()
+main()
