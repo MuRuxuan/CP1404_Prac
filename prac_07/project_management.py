@@ -153,9 +153,6 @@ def filter_projects(projects):
     for project in filtered:
         print(project)
 
-
-# ========== Add Project ==========
-
 def add_project(projects):
     """Add a new project using validated user input."""
     print("Let's add a new project")
@@ -173,8 +170,6 @@ def add_project(projects):
 
     projects.append(Project(name, start_date, priority, cost_value, completion))
 
-
-# ========== Update Project ==========
 
 def update_project(projects):
     """Update an existing project's completion percentage and/or priority."""
@@ -196,8 +191,6 @@ def update_project(projects):
         project.priority = get_valid_int(new_priority, MIN_PRIORITY, MAX_PRIORITY)
 
 
-# ========== Quit ==========
-
 def handle_quit(projects):
     """Handle program exit, offering to save data to the default file."""
     answer = input(f"Would you like to save to {DEFAULT_FILENAME}? ").strip().lower()
@@ -205,8 +198,6 @@ def handle_quit(projects):
         save_projects(projects, DEFAULT_FILENAME)
     print("Thank you for using custom-built project management software.")
 
-
-# ========== Input Validation Helpers ==========
 
 def get_non_empty_string(prompt):
     """Return a non-empty user input string."""
