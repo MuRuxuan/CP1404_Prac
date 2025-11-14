@@ -1,0 +1,16 @@
+BoxLayout:
+    orientation: 'vertical'
+
+
+    Label:
+        size_hint_y: 0.1
+        text: 'Dynamically Generated Labels'
+        size_hint_y: None
+        height: 50
+        font_size: 18
+
+    BoxLayout:
+        id: label_container
+        orientation: 'vertical'
+        size_hint_y: None
+        height: self.minimum_height
